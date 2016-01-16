@@ -82,6 +82,10 @@ salary$Last.Name <- gsub(" II", "", salary$Last.Name)
 salary$Last.Name <- gsub(", Jr.", "", salary$Last.Name)
 salary$Last.Name <- gsub("-", "0", salary$Last.Name)
 
+splitIds <- do.call('rbind', strsplit(salary$Id,'-',fixed=TRUE))
+salary$Id <- splitIds[,2]
+
+
 playerStats <- NULL
 uniqueTeams <- unique(salary$Team)
 for(t in uniqueTeams)
@@ -99,16 +103,58 @@ for(t in uniqueTeams)
   }
 }
 
+###### REMOVE BAD MATCHES
 playerStats <- playerStats[which(playerStats$Team != 'MRQTT' | playerStats$No != '22'),] # Wally Ellenson
 salary <- salary[salary$Id != '23258',]
+
+playerStats <- playerStats[which(playerStats$Team != 'NCST' | playerStats$No != '15'),] # Cody Martin
+salary <- salary[salary$Id != '58139',]
+
+playerStats <- playerStats[which(playerStats$Team != 'STNFD' | playerStats$No != '3'),] # Tyler Robinson
+salary <- salary[salary$Id != '68297',]
+
+playerStats <- playerStats[which(playerStats$Team != 'STNFD' | playerStats$No != '3'),] # Malcolm Allen
+salary <- salary[salary$Id != '40776',]
+
+playerStats <- playerStats[which(playerStats$Team != 'STNFD' | playerStats$No != '15'),] # Marcus Allen
+salary <- salary[salary$Id != '40777',]
+
+playerStats <- playerStats[which(playerStats$Team != 'MEMPH' | playerStats$No != '14'),] # K.J. Lawson
+salary <- salary[salary$Id != '66121',]
+
+#playerStats <- playerStats[which(playerStats$Team != 'MP' | playerStats$No != '13'),] #13  Jeremy Johnson
+salary <- salary[salary$Id != '66895',]
+
+playerStats <- playerStats[which(playerStats$Team != 'PQ' | playerStats$No != '13'),] # Dylan Jones
+salary <- salary[salary$Id != '48518',]
+
+salary <- salary[salary$Id != '42304',] # Josh Jones
+
+playerStats <- playerStats[which(playerStats$Team != 'UCF' | playerStats$No != '33'),] # Shaheed Davis
+salary <- salary[salary$Id != '58100',]
+
+salary <- salary[salary$Id != '68157',] # Zack Smith
+
+salary <- salary[salary$Id != '60236',] # Chris Collins
+
+playerStats <- playerStats[which(playerStats$Team != 'SMU' | playerStats$No != '0'),] #Ben Moore
+salary <- salary[salary$Id != '40264',]
+
+playerStats <- playerStats[which(playerStats$Team != 'ECAR' | playerStats$No != '10'),] #Clarence Williams
+salary <- salary[salary$Id != '66051',]
+
+
+
+
+#############################
 
 cbbOdds <- getOddsData("ncb")
 cbbOdds <- cbbOdds[cbbOdds$Source == "SportsBetting.ag",]
 cbbOdds$Spread <- as.numeric(cbbOdds$Spread)
 cbbOdds$OU <- as.numeric(cbbOdds$OU)
 
-#cbbOdds <- rbind(cbbOdds, data.frame(Source="test", Home="DUKE", Away="KTCKY", Spread=-2, OU=156.5))
-#cbbOdds <- rbind(cbbOdds, data.frame(Source="test", Home="MCHST", Away="KANS", Spread=-5, OU=149.0))
+#cbbOdds <- rbind(cbbOdds, data.frame(Source="test", Home="NWEST", Away="LOYMD", Spread=-22, OU=150))
+#cbbOdds <- rbind(cbbOdds, data.frame(Source="test", Home="MRLND", Away="MRSHL", Spread=-21, OU=150))
 
 homeScores <- data.frame(Team=cbbOdds$Home, Score=(cbbOdds$OU/2 + cbbOdds$Spread/2))
 awayScores <- data.frame(Team=cbbOdds$Away, Score=(cbbOdds$OU/2 - cbbOdds$Spread/2))
@@ -117,6 +163,7 @@ expectedTeamScores$Team <- toupper(expectedTeamScores$Team)
 
 expectedTeamScores <- substituteTeamNames(expectedTeamScores, "Team")
 
+
 #merge(expectedTeamScores, TEAM_NAMES, by.x="Team", by.y="ABB")
 salary <- merge(salary, expectedTeamScores, by="Team", all.x = TRUE)
 salary <- merge(salary, playerStats, by=c("Team", "Last.Name"), all.x = TRUE)
@@ -124,6 +171,7 @@ salary$expectedScore <- salary$Score * salary$teamPointPercentage
 
 unmatchedTeams <- unique(salary$Team[is.na(salary$Score)])
 salary$expectedScore[is.na(salary$expectedScore)] <- 0
+
 
 POINTS <- 1
 RBS <- 1.2
@@ -138,8 +186,7 @@ salary$expectedPoints[is.na(salary$expectedPoints)] <- 0
 salary <- salary[salary$Injury.Indicator != 'IR',]
 salary <- salary[salary$Injury.Indicator != 'O',]
 salary <- salary[salary$Injury.Indicator != 'D',]
-
-
+salary <- salary[salary$Injury.Indicator != 'GTD',]
 
 
 

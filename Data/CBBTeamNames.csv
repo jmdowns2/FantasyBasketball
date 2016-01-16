@@ -24,7 +24,7 @@
 "XAV","Xavier","XAVIER/xavier-musketeers"
 "MISSR","Missouri","MIZZOU/missouri-tigers"
 "DPAUL","Depaul","DEPAUL/depaul-blue-demons"
-"PENST","Penn St","PSU/penn-state-nittany-lions"
+"PENST","Penn State","PSU/penn-state-nittany-lions"
 "KANS","Kansas","KANSAS/kansas-jayhawks"
 "PROV","Providence","PROV/providence-friars"
 "ILLIN","Illinois","ILL/illinois-fighting-illini"
@@ -42,9 +42,8 @@
 "AZ","Akron","AKRON/akron-zips"
 "IOWST","Iowa State","IOWAST/iowa-state-cyclones"
 "IOWA","Iowa","IOWA/iowa-hawkeyes"
-"TTRO","Troy","TROY/troy-trojans"
-"STNHL","Seaton Hall","SETON/seton-hall-pirates"
-"WSHST","Washington State","WASHST/washington-state-cougars"
+"STNHL","Seton Hall","SETON/seton-hall-pirates"
+"WSHST","Washington St","WASHST/washington-state-cougars"
 "IV","Idaho","IDAHO/idaho-vandals"
 "UTAH","Utah","UTAH/utah-utes"
 "WCHST","Wichita State","WICHST/wichita-state-shockers"
@@ -67,12 +66,70 @@
 "LSU","LSU","LSU/lsu-tigers"
 "HOU","Houston","HOU/houston-cougars"
 "SYRCS","Syracuse","CUSE/syracuse-orange"
-"SJOHN","Staint John's","STJOHN/st-johns-red-storm"
-"RIR","Rhode Island","RI/rhode-island-rams"
-"SOFLA","South Florida","SFLA/south-florida-bulls"
+"SJOHN","St John's","STJOHN/st-johns-red-storm"
+"RIR","URI","RI/rhode-island-rams"
+"SOFLA","USF","SFLA/south-florida-bulls"
 "TEMPL","Temple","TEMPLE/temple-owls"
-"SJH","Saint Joseph's","STJOES/saint-josephs-hawks"
+"SJH","Saint Joe's","STJOES/saint-josephs-hawks"
 "ALBMA","Alabama","BAMA/alabama-crimson-tide"
 "CLEMS","Clemson","CLEM/clemson-tigers"
 "UTEP","UTEP","UTEP/texas-el-paso-miners"
 "ARZNA","Arizona","ARIZ/arizona-wildcats"
+"LTB","LA Tech","LATECH/louisiana-tech-bulldogs"
+"MISSP","Ole Miss","MISS/ole-miss-rebels"
+"GSE","Ga Southern","GASOU/georgia-southern-eagles"
+"MH","Monmouth","MNMTH/monmouth-hawks"
+"MBEA","Mercer","MERCER/mercer-bears"
+"VCU","VCU","VCU/vcu-rams"
+"LRC","LA-Lafayette","LALAF/ul-lafayette-ragin-cajuns"
+"STNFD","Stanford","STNFRD/stanford-cardinal"
+"TLANE","Tulane","TULANE/tulane-green-wave"
+"GRB","Gardner-Webb","GWEBB/gardner-webb-bulldogs"
+"FAO","FAU","FAU/florida-atlantic-owls"
+"NAL","N Arizona","NAU/northern-arizona-lumberjacks"
+"MISST","Miss St","MISSST/mississippi-state-bulldogs"
+"FLAST","FSU","FSU/florida-state-seminoles"
+"MRSHL","Marshall","MRSHL/marshall-thundering-herd"
+"WSTVA","West Virginia","WVU/west-virginia-mountaineers"
+"USC","USC","USC/southern-california-trojans"
+"CPM","Cal Poly","CPOLY/cal-poly-mustangs"
+"SMU","SMU","SMU/smu-mustangs"
+"HPIR","Hampton","HAMP/hampton-pirates"
+SOCAR,"South Carolina","SC/south-carolina-gamecocks"
+CCC,"Costal Carolina","CSTCAR/coastal-carolina-chanticleers"
+LBSU,"Long Beach","LNGBCH/long-beach-state-49ers"
+NH,"Northeastern","NEAST/northeastern-huskies"
+CREIG,"Creighton","CREIGH/creighton-bluejays"
+INDNA,Indiana,IND/indiana-hoosiers
+NDAME,Notre Dame,ND/notre-dame-fighting-irish
+GRGIA,Georgia,UGA/georgia-bulldogs
+NWEST,Northwestern,NWEST/northwestern-wildcats
+VIRG,UVA,UVA/virginia-cavaliers
+TULSA,Tulsa,TULSA/tulsa-golden-hurricane
+UNLV,UNLV,UNLV/unlv-rebels
+SDSU,San Diego State,SDGST/san-diego-state-aztecs
+NMSU,New Mexico St,NMEXST/new-mexico-state-aggies
+GBP,Green Bay,WISGB/green-bay-phoenix
+LL,Lafayette,LAFAY/lafayette-leopards
+MP,Milwaukee,MILW/wisconsin-milwaukee-panthers
+UNM,New Mexico,NMEX/new-mexico-lobos
+HARV,Harvard,HARV/harvard-crimson
+HW,Hawaii,HAWAII/hawaii-warriors
+LOUIS,Louisville,LVILLE/louisville-cardinals
+LOYMD,Loyola (MD),LOYMD/loyola-maryland-greyhounds
+DAVID,Davidson,DAVID/davidson-wildcats
+USBG,UCSB,UCSB/santa-barbara-gauchos
+PQ,Penn,PENN/pennsylvania-quakers
+EP,Elon,ELON/elon-phoenix
+TXTCH,Texas Tech,TXTECH/texas-tech-red-raiders
+PURDU,Purdue,PURDUE/purdue-boilermakers
+GWC,G Washington,GWASH/george-washington-colonials
+MICH,Michigan,MICH/michigan-wolverines
+VTECH,Virginia Tech,VATECH/virginia-tech-hokies
+RUTG,Rutgers,RUT/rutgers-scarlet-knights
+MIAMI,Miami (FL),MIAMI/miami-fla-hurricanes
+BOSTC,Boston College,BC/boston-college-eagles
+TCU,TCU,TCU/tcu-horned-frogs
+VANDB,Vanderbilt,VANDY/vanderbilt-commodores
+PITT,Pittsburg,PITT/pittsburgh-panthers
+ECAR,ECU,ECU/east-carolina-pirates
